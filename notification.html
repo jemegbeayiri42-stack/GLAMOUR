@@ -1,93 +1,92 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Live Notifications</title>
+<!-- Live Notification Popup -->
+<div id="proof-popup"></div>
 
 <style>
-body{
-    margin:0;
-    font-family:Arial,sans-serif;
+#proof-popup {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: #111;
+    color: white;
+    padding: 15px;
+    border-radius: 12px;
+    max-width: 320px;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    border-left: 4px solid #00d4ff;
+    z-index: 9999;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
 }
 
-.proof-popup{
-    position:fixed;
-    bottom:20px;
-    left:20px;
-    background:#111;
-    color:#fff;
-    padding:15px 20px;
-    border-radius:12px;
-    max-width:320px;
-    box-shadow:0 4px 15px rgba(0,0,0,.4);
-    border-left:4px solid #00d4ff;
-    z-index:9999;
-    animation:slideIn .5s ease;
+#proof-popup.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.proof-popup strong{
-    color:#00d4ff;
+#proof-popup strong {
+    color: #00d4ff;
 }
 
-@keyframes slideIn{
-    from{
-        transform:translateX(-100%);
-        opacity:0;
-    }
-    to{
-        transform:translateX(0);
-        opacity:1;
-    }
+#proof-popup small {
+    color: #bbb;
 }
 </style>
-</head>
-<body>
-
-<div id="proof-popup" class="proof-popup"></div>
 
 <script>
 const notifications = [
-    "Aisha from Kano just activated an account",
+    "Aisha from Kano just activated Glamour",
     "David from Abuja just joined Glamour",
-    "Mary from Lagos just activated an account",
+    "Mary from Lagos just activated Glamour",
     "John from Port Harcourt just joined Glamour",
-    "Fatima from Kaduna just activated an account",
+    "Fatima from Kaduna just activated Glamour",
     "Ibrahim from Sokoto just joined Glamour",
-    "Grace from Enugu just activated an account",
+    "Grace from Enugu just activated Glamour",
     "Samuel from Benin City just joined Glamour",
-    "Chinedu from Onitsha just activated an account",
+    "Chinedu from Onitsha just activated Glamour",
     "Esther from Uyo just joined Glamour",
-    "Emeka from Owerri just activated an account",
+    "Emeka from Owerri just activated Glamour",
     "Blessing from Asaba just joined Glamour",
-    "Ahmed from Maiduguri just activated an account",
+    "Ahmed from Maiduguri just activated Glamour",
     "Joy from Warri just joined Glamour",
-    "Michael from Jos just activated an account",
+    "Michael from Jos just activated Glamour",
     "Peace from Calabar just joined Glamour",
-    "Daniel from Abeokuta just activated an account",
+    "Daniel from Abeokuta just activated Glamour",
     "Ruth from Akure just joined Glamour",
-    "Kelvin from Yenagoa just activated an account",
-    "Mercy from Ilorin just joined Glamour"
+    "Kelvin from Yenagoa just activated Glamour",
+    "Mercy from Ilorin just joined Glamour",
+    "Victor from Lokoja just activated Glamour",
+    "Jennifer from Awka just joined Glamour",
+    "Collins from Aba just activated Glamour",
+    "Sarah from Minna just joined Glamour",
+    "Emmanuel from Katsina just activated Glamour"
 ];
 
 const popup = document.getElementById("proof-popup");
 
-function showNotification(){
+function showNotification() {
     const notification =
         notifications[Math.floor(Math.random() * notifications.length)];
 
     const mins = Math.floor(Math.random() * 15) + 1;
 
+    const firstName = notification.split(" ")[0];
+
     popup.innerHTML = `
-        <strong>${notification.split(" ")[0]}</strong>
+        <strong>${firstName}</strong>
         ${notification.substring(notification.indexOf(" "))}
-        <br><small>• ${mins} mins ago</small>
+        <br>
+        <small>• ${mins} mins ago</small>
     `;
+
+    popup.classList.add("show");
+
+    setTimeout(() => {
+        popup.classList.remove("show");
+    }, 4500);
 }
 
 showNotification();
-setInterval(showNotification, 5000);
+setInterval(showNotification, 6000);
 </script>
-
-</body>
-</html>
