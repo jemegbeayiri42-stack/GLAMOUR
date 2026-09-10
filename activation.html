@@ -1,222 +1,30 @@
-<!DOCTYPE html><html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Glamour Activation</title><style>
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NEXTEL Activation</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+:root{--green:#1f6b2a;--green2:#2d7d34;--lemon:#dfff3f;--white:#fff}
+body{background:linear-gradient(180deg,var(--green),var(--green2));color:#fff;padding:18px}
+.container{max-width:480px;margin:auto}.card{background:rgba(255,255,255,.1);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.12);border-radius:26px;padding:22px;margin-bottom:18px}
+.title,.section h3{color:var(--lemon);font-weight:800}.amount{font-size:40px;color:var(--lemon);font-weight:800;margin:15px 0}.feature{margin:8px 0;opacity:.95}
+.btn{display:block;width:100%;padding:15px;border:none;border-radius:40px;font-weight:800;margin-top:12px;cursor:pointer}.primary{background:var(--lemon);color:var(--green)}.dark{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.12)}
+.bank{background:rgba(255,255,255,.08);padding:15px;border-radius:16px}.timer{font-size:42px;color:var(--lemon);font-weight:800}.hide{display:none}
+</style></head><body><div class="container">
+<div id=f1 class=card><div class=title>NEXTEL ACCOUNT ACTIVATION</div><p>Activate your account to unlock all earning modules.</p><div class=amount id=fee></div><div class=section><h3>EARNING MODULES</h3><div id=mods></div></div><button class="btn primary" onclick="s(2)">Activate Now</button><button class="btn dark" onclick="location.href='dashboard.html'">Maybe Later</button></div>
+<div id=f2 class="card hide"><div class=title>Secure Payment</div><div class=amount id=amt></div><div class=timer id=t>5:00</div><div class="bank">
+<h3 style="color:var(--lemon);margin-bottom:12px;">🏦 Bank Details</h3>
+<p><strong>Bank Name:</strong> PAGA</p>
+<p><strong>Account Number:</strong> 0365001762</p>
+<p><strong>Account Name:</strong> AYIRI JEMEGBE</p><br>
+<button class="btn dark" onclick="copyMono()">📋 Copy Account Number</button>
+</div><button class="btn primary" onclick="s(3)">I've Made Payment</button></div>
+<div id=f3 class="card hide"><div class=title>Verification Complete</div><a id=w class="btn primary" target=_blank>Send Proof via WhatsApp</a></div>
+</div>
+<script>
+const plan=localStorage.getItem("nextel_plan")||"DIAMOND";
+const d={DIAMOND:{fee:"₦10,500",mods:[["💰 Instant Cashback","₦9,000"],["🤝 Direct Referral","₦7,200"],["📞 Call Rewards","₦5,500"],["📩 SMS Rewards","₦3,000"],["▶️ YouTube Earnings","₦20,000"],["🎁 Spillover Bonus","₦1,000"]]},ROYAL:{fee:"₦17,500",mods:[["💰 Instant Cashback","₦16,000"],["🤝 Direct Referral","₦12,500"],["📞 Call Rewards","₦15,000"],["📩 SMS Rewards","₦10,000"],["▶️ YouTube Premium","₦40,000"],["👻 Snapchat Earnings","₦6,000"],["🎉 Network Bonus","₦8,000"],["📊 Nextel Web Gain","₦50,000"]]}};
+fee.innerText=d[plan].fee;amt.innerText=d[plan].fee;d[plan].mods.forEach(m=>mods.innerHTML+=`<p class=feature>${m[0]} - <b>${m[1]}</b></p>`);
+function s(n){f1.classList.add('hide');f2.classList.add('hide');f3.classList.add('hide');document.getElementById('f'+n).classList.remove('hide');if(n==2){let x=300;let i=setInterval(()=>{t.innerText=Math.floor(x/60)+":"+(x%60).toString().padStart(2,'0');if(--x<0)clearInterval(i)},1000)}if(n==3){w.href="https://wa.me/2347086862033?text="+encodeURIComponent(`Hello NEXTEL Admin, I have completed my activation payment. Plan: ${plan} Amount: ${d[plan].fee}`)}}
+function copyMono(){navigator.clipboard.writeText('0365001762');alert('Account number copied successfully!');}</script></body></html>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Poppins,sans-serif;
-}
-
-body{
-background:linear-gradient(180deg,#111,#050505,#000);
-color:white;
-padding:20px;
-}
-
-.container{
-max-width:650px;
-margin:auto;
-}
-
-.card{
-background:#151515;
-border:1px solid rgba(255,215,0,.15);
-border-radius:20px;
-padding:25px;
-margin-bottom:20px;
-}
-
-.gold{
-color:#FFD700;
-}
-
-.center{
-text-align:center;
-}
-
-.big{
-font-size:42px;
-font-weight:800;
-}
-
-.timer{
-font-size:42px;
-font-weight:800;
-color:#FFD700;
-text-align:center;
-}
-
-.feature{
-padding:10px 0;
-border-bottom:1px solid rgba(255,255,255,.05);
-}
-
-.bank{
-background:#1d1d1d;
-padding:18px;
-border-radius:15px;
-margin-top:15px;
-border:1px solid rgba(255,215,0,.12);
-}
-
-button{
-width:100%;
-padding:15px;
-border:none;
-border-radius:50px;
-font-weight:700;
-cursor:pointer;
-margin-top:12px;
-}
-
-.activate-btn{
-background:#FFD700;
-color:#000;
-}
-
-.copy-btn{
-background:#222;
-color:#FFD700;
-border:1px solid rgba(255,215,0,.2);
-}
-
-.whatsapp-btn{
-display:none;
-background:#25D366;
-color:white;
-text-decoration:none;
-text-align:center;
-padding:15px;
-border-radius:50px;
-font-weight:700;
-margin-top:15px;
-}
-
-.small{
-color:#bbb;
-line-height:1.7;
-}
-
-.later{
-display:block;
-text-align:center;
-margin-top:20px;
-color:#FFD700;
-text-decoration:none;
-}
-
-</style></head><body><div class="container"><!-- PAGE 1 --><div id="activatePage"><div class="card"><h2>🔒 Activate Your Account</h2><br><p>
-Unlock all 10 earning modules and withdraw instantly.
-</p><br><div class="feature">✓ ₦12,000 instant bonus sent to your bank</div>
-<div class="feature">✓ Earn ₦3,000 every 15 minutes of activity</div>
-<div class="feature">✓ Access all 10 earning modules immediately</div>
-<div class="feature">✓ €6 credit bonus (withdrawable)</div>
-<div class="feature">✓ No withdrawal delays — anytime, any bank</div><br><p>One-time activation fee</p><h1 class="gold big">
-₦14,000
-</h1><button class="activate-btn" onclick="showPayment()">
-Activate Now →
-</button><a href="dashboard.html" class="later">
-Maybe Later
-</a></div></div><!-- PAGE 2 --><div id="paymentPage" style="display:none;"><div class="card"><h1 class="gold">
-Glamour
-</h1><br><h2>SECURE PAYMENT</h2><p>Complete Your Payment</p><br><p>Activating: Glam Premium Pass</p><br><p>Amount to Pay</p><h1 class="gold big">
-₦14,000
-</h1><br><p>Time Remaining</p><div id="paymentTimer" class="timer">
-5:00
-</div><br><p>
-Transfer ₦14,000 to the account below
-</p><div class="bank"><h3 class="gold">Paga</h3><p>Option 1</p><br><p>Account Number</p><h2>0365001762</h2><br><p>Account Name</p><strong>AYIRI JEMEGBE</strong>
-
-
-<button class="copy-btn" onclick="copyPaga()">
-Copy Paga Details
-</button></div><p class="small">After transferring, tap the button below and send your receipt on WhatsApp.
-
-</p><button class="activate-btn" onclick="paymentMade()">
-I've Made Payment
-</button></div></div><!-- PAGE 3 --><div id="proofPage" style="display:none;"><div class="card center"><h2>Verification In Progress</h2><br><p>
-Preparing secure verification channel...
-</p><br><div id="proofCountdown" class="timer">
-10
-</div><a
-id="whatsappBtn"
-class="whatsapp-btn"
-href="https://wa.me/2347086862033?text=Hello%20Admin,%0A%0AI%20have%20successfully%20completed%20my%20Glamour%20Premium%20activation%20payment.%0A%0AKindly%20verify%20my%20payment%20and%20activate%20my%20account.%0A%0AI%20have%20attached%20my%20payment%20receipt%20or%20screenshot%20below%20for%20confirmation.%0A%0AThank%20you.%20I%20look%20forward%20to%20accessing%20my%20dashboard%20and%20earning%20modules."
-target="_blank">
-
-Send Proof via WhatsApp
-
-</a></div></div></div><script>
-
-function showPayment(){
-
-document.getElementById("activatePage").style.display="none";
-document.getElementById("paymentPage").style.display="block";
-
-let timeLeft=300;
-
-const timer=setInterval(()=>{
-
-let minutes=Math.floor(timeLeft/60);
-let seconds=timeLeft%60;
-
-document.getElementById("paymentTimer").innerHTML=
-minutes+":"+(seconds<10?"0":"")+seconds;
-
-timeLeft--;
-
-if(timeLeft<0){
-
-clearInterval(timer);
-
-document.getElementById("paymentTimer").innerHTML="Expired";
-
-}
-
-},1000);
-
-}
-
-function paymentMade(){
-
-document.getElementById("paymentPage").style.display="none";
-
-document.getElementById("proofPage").style.display="block";
-
-let wait=10;
-
-const countdown=setInterval(()=>{
-
-document.getElementById("proofCountdown").innerHTML=wait;
-
-wait--;
-
-if(wait<0){
-
-clearInterval(countdown);
-
-document.getElementById("whatsappBtn").style.display="block";
-
-}
-
-},1000);
-
-}
-
-function copyPaga(){
-
-navigator.clipboard.writeText(
-"Paga\nAccount Number: 0365001762\nAccount Name: AYIRI JEMEGBE"
-);
-
-alert("Paga details copied!");
-
-}
-
-
-</script></body>
-  </html>
