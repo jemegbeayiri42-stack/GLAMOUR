@@ -4,637 +4,574 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>GLAMOUR REGISTRATION</title>
+<title>NEXTEL CONNECT</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-scroll-behavior:smooth;
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+:root{
+--green:#3B7A3F;      
+--green2:#2F6332;     
+--lemon:#EAFB63;     
+--card:#3B7A3F;
+--text:#ffffff;
+--bg:#3B7A3F;
 }
-
 body{
-background:#050505;
-color:white;
+background:var(--green);
+color:#ffffff;
 overflow-x:hidden;
 }
-
-:root{
---gold:#FFD700;
---dark:#111111;
---card:#161616;
-}
-
 .hero{
-min-height:100vh;
-padding:30px 20px;
 background:
-linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.85)),
-url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1400');
-background-size:cover;
-background-position:center;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-}
-
-.logo{
-font-size:32px;
-font-weight:800;
-color:var(--gold);
-margin-bottom:25px;
-}
-
-.logo span{
-display:block;
-font-size:14px;
-color:#fff;
-letter-spacing:3px;
-margin-top:5px;
-}
-
-.hero h1{
-font-size:45px;
-max-width:900px;
-line-height:1.2;
-margin-bottom:20px;
-}
-
-.gold{
-color:var(--gold);
-}
-
-.hero p{
-max-width:800px;
-font-size:18px;
-line-height:1.8;
-color:#d6d6d6;
-margin-bottom:35px;
-}
-
-.btns{
-display:flex;
-gap:15px;
-flex-wrap:wrap;
-justify-content:center;
-}
-
-.btn{
-padding:16px 35px;
-border-radius:40px;
-font-weight:700;
-text-decoration:none;
-transition:.3s;
-}
-
+linear-gradient(rgba(59,122,63,.88),rgba(47,99,50,.90)),url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1400');background-size:cover;background-position:center;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;color:#fff}
+.logo{font-size:42px;font-weight:800}.logo span{display:block;font-size:14px;color:#eee}
+.hero h1{font-size:48px;margin:20px 0}.hero p{max-width:900px;line-height:1.9}
+.btns{display:flex;gap:15px;justify-content:center;flex-wrap:wrap;margin-top:30px}
+.btn{padding:15px 30px;border-radius:50px;font-weight:700;text-decoration:none;transition:.3s}
+.btn:hover,.card:hover,.stat:hover{transform:translateY(-6px)}
 .btn-primary{
-background:var(--gold);
-color:black;
-box-shadow:0 0 25px rgba(255,215,0,.4);
-}
-
-.btn-primary:hover{
-transform:translateY(-3px);
-}
-
+background:var(--lemon);
+color:var(--green);
+font-weight:700;box-shadow:0 10px 30px rgba(123,47,247,.3)}
 .btn-secondary{
-border:2px solid var(--gold);
-color:var(--gold);
+background:#ffffff;
+color:var(--green);
+border:2px solid var(--lemon);
 }
-
-.stats{
-padding:70px 20px;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:20px;
-max-width:1200px;
-margin:auto;
-}
-
-.stat{
-background:var(--card);
-padding:30px;
-border-radius:20px;
-text-align:center;
-border:1px solid rgba(255,215,0,.2);
-}
-
-.stat h2{
-font-size:35px;
-color:var(--gold);
-margin-bottom:10px;
-}
-
-.stat p{
-color:#bbb;
-}
-
-.live-feed{
-background:#0d0d0d;
-padding:18px;
-overflow:hidden;
-border-top:1px solid rgba(255,215,0,.2);
-border-bottom:1px solid rgba(255,215,0,.2);
-}
-
-.ticker{
-white-space:nowrap;
-display:inline-block;
-animation:scroll 40s linear infinite;
-color:#e5e5e5;
-font-size:15px;
-}
-
-@keyframes scroll{
-0%{transform:translateX(100%)}
-100%{transform:translateX(-100%)}
-}
-
-.section-title{
-text-align:center;
-font-size:38px;
-margin-bottom:20px;
-}
-
-.why{
-padding:90px 20px;
-}
-
-.why-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-max-width:1200px;
-margin:auto;
-}
-
-.card{
-background:var(--card);
-padding:30px;
-border-radius:20px;
-border:1px solid rgba(255,215,0,.15);
-}
-
-.card h3{
-color:var(--gold);
-margin-bottom:15px;
-}
-
-.card p{
-color:#cfcfcf;
-line-height:1.8;
-}
-
-@media(max-width:768px){
-
-.hero h1{
-font-size:32px;
-}
-
-.hero p{
-font-size:15px;
-}
-
-.logo{
-font-size:24px;
-}
-
-}
+.section{padding:80px 20px}
+.title{text-align:center;color:var(--lemon);font-size:38px;margin-bottom:35px}
+.grid,.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px;max-width:1200px;margin:auto}
+.stats{padding:60px 20px}
+.stat,.card{
+background:#4A8C4F;
+color:#ffffff;backdrop-filter:blur(10px);padding:25px;border-radius:22px;box-shadow:0 12px 35px rgba(0,0,0,.08);border:1px solid rgba(123,47,247,.12);transition:.3s}
+.stat h2,.card h3{color:var(--lemon)}
+.card p,.stat p{
+color:#ffffff;line-height:1.8}
+.live-popup{position:fixed;left:20px;bottom:20px;width:320px;background:#fff;color:#222;border-left:6px solid var(--purple);border-radius:18px;padding:15px;box-shadow:0 15px 40px rgba(0,0,0,.18);display:none;z-index:9999}
+.live-title{color:var(--purple);font-weight:700}.live-time{color:#666;font-size:12px;margin-top:5px}
+footer{background:linear-gradient(90deg,var(--green),var(--green2));color:#fff;text-align:center;padding:45px;margin-top:50px}
+@keyframes slideUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:768px){.hero h1{font-size:34px}.title{font-size:30px}}
 
 </style>
 </head>
 
 <body>
 
+<!-- HERO -->
 <section class="hero">
+<div class="logo"> Nextel <span> </div>
 
-<div class="logo">
-💎 GLAMOUR REGISTRATION
-<span>PREMIUM MEMBER PLATFORM</span>
-</div>
-
-<h1>
-Turn Your Daily Activities Into
-<span class="gold">Opportunities</span>
-</h1>
+<h1>Where. Every call. Creates value.</h1>
 
 <p>
-Create your account, activate your membership, connect with people around the world, and access premium platform features through a secure dashboard.
+Nextel Connect is Nigeria's premium digital earning ecosystem, built around network participation, structured rewards, and real payouts.
 </p>
 
 <div class="btns">
-
-<a href="register.html" class="btn btn-primary">
-CREATE ACCOUNT
-</a>
-
-<a href="login.html" class="btn btn-secondary">
-LOGIN
-</a>
-
+<a href="register.html" class="btn btn-primary">CREATE ACCOUNT</a>
+<a href="login.html" class="btn btn-secondary">LOGIN</a>
 </div>
-
 </section>
 
+<!-- STATS -->
 <section class="stats">
-
-<div class="stat">
-<h2>5,000+</h2>
-<p>Registered Members</p>
-</div>
-
-<div class="stat">
-<h2>2,500+</h2>
-<p>Activated Accounts</p>
-</div>
-
-<div class="stat">
-<h2>20+</h2>
-<p>Countries</p>
-</div>
-
-<div class="stat">
-<h2>24/7</h2>
-<p>Support Access</p>
-</div>
-
+<div class="stat"><h2>10,000+</h2><p>Active Users</p></div>
+<div class="stat"><h2>5,000+</h2><p>AI Videos Created</p></div>
+<div class="stat"><h2>2,500+</h2><p>Activated Accounts</p></div>
+<div class="stat"><h2>60+</h2><p>Countries</p></div>
+<div class="stat"><h2>24/7</h2><p>Support Access</p></div>
 </section>
 
-<div class="live-feed">
+<!-- WHY NEXTEL -->
+<section class="section">
+<h2 class="title">Why Choose NEXTEL</h2>
 
-<div class="ticker">
-
-Chinedu A. • Joined Glamour Registration •
-Amina B. • Joined Glamour Registration •
-David O. • Joined Glamour Registration •
-Grace N. • Joined Glamour Registration •
-Michael E. • Joined Glamour Registration •
-Sarah K. • Joined Glamour Registration •
-Emmanuel T. • Joined Glamour Registration •
-Esther A. • Joined Glamour Registration •
-
-</div>
-
-</div>
-
-<section class="why">
-
-<h2 class="section-title">
-Why Choose <span class="gold">Glamour?</span>
-</h2>
-
-<div class="why-grid">
+<div class="grid">
 
 <div class="card">
-<h3>📱 Mobile Friendly</h3>
-<p>
-Access your account from any smartphone, tablet or desktop device.
-</p>
+<h3>🚀 Complete AI Ecosystem</h3>
+<p>NEXTEL is not just one tool — it is a full ecosystem combining learning, earning, content creation, and monetization in one platform.</p>
 </div>
 
 <div class="card">
-<h3>⚡ Fast Activation</h3>
-<p>
-Complete registration and activate your account through a simple process.
-</p>
+<h3>💰 Multiple Income Streams</h3>
+<p>Users can earn through CALLS, AI videos, WhatsApp sharing, referrals, news reading, fan battles, and more — giving multiple ways to generate income daily.</p>
 </div>
 
 <div class="card">
-<h3>🔒 Secure Access</h3>
-<p>
-Protected login system and secure member dashboard.
-</p>
+<h3>📱 Beginner Friendly</h3>
+<p>Even without technical skills, users can start earning. Every feature is designed with simple steps and easy navigation.</p>
 </div>
 
 <div class="card">
-<h3>💬 WhatsApp Support</h3>
-<p>
-Get assistance quickly through our dedicated WhatsApp support channel.
-</p>
+<h3>🔒 Secure & Reliable</h3>
+<p>Your data, earnings, and account activity are protected with a secure system designed for trust and transparency.</p>
 </div>
 
 </div>
-
 </section>
 
-</body>
-  </html>
-  <section class="why" style="background:#0b0b0b;">
+<!-- FEATURES (DETAILED) -->
+<section class="section">
+<h2 class="title">Platform Features</h2>
 
-<h2 class="section-title">
-Platform <span class="gold">Features</span>
-</h2>
-
-<div class="why-grid">
+<div class="grid">
 
 <div class="card">
-<h3>📸 GlamRealtime</h3>
-<p>
-Share moments from your daily life, favorite places, experiences and activities in real time with a global audience.
-</p>
+<h3>📞 Calls Reward</h3>
+<p>Get paid per second for making or receiving verified brand calls. You earn ₦628 for 1 minute and up to ₦4,660 for 20 minutes. (Note: This feature is exclusive to the Royal eSIM).</p>
 </div>
 
 <div class="card">
-<h3>🍲 GlamCuisine</h3>
-<p>
-Showcase local dishes, recipes and food culture. Share culinary experiences and connect through food.
-</p>
+<h3>💬 SMS reward</h3>
+<p>Earn ₦15 to ₦50 per message just for opening brand texts, downloading their apps, or using your promo code.</p>
 </div>
 
 <div class="card">
-<h3>📞 GlamFaceTime</h3>
-<p>
-Interact with users from different backgrounds, build connections and participate in engaging conversations.
-</p>
+<h3>📰 News Reward System</h3>
+<p>Read daily curated news articles from different regions and earn rewards up to ₦7,000 daily based on engagement and consistency.</p>
+</div>
+
+<div class="card"> 
+<h3>NEXTEL SHARES</h3>
+<p> IF you don't want to make calls, you can become a shareholder and earn a steady 1% dividend from Nextel's global call and SMS traffic.</p>
 </div>
 
 <div class="card">
-<h3>🌙 GlamDarkMode</h3>
-<p>
-Stay active during different time zones and connect with members across the globe whenever opportunities arise.
-</p>
+<h3>📱 WhatsApp Reward System</h3>
+<p>Users earn by sharing AI-generated content on WhatsApp status and engaging with promotional materials.</p>
 </div>
 
 <div class="card">
-<h3>🗣️ GlamLingua</h3>
-<p>
-Share your local language, culture and communication skills with people interested in learning more.
-</p>
+<h3>▶️ YouTube Monetization System</h3>
+<p>Users can create AI content and grow YouTube channels while earning through traffic, engagement, and monetization support tools.</p>
 </div>
+
 
 <div class="card">
-<h3>💼 GlamWorks</h3>
-<p>
-Showcase your skills, discover opportunities and connect with organizations seeking talent and services.
-</p>
-</div>
-
-<div class="card">
-<h3>✨ GlamStatus</h3>
-<p>
-Post updates, stories and experiences while engaging with the wider Glamour community.
-</p>
-</div>
-
-<div class="card">
-<h3>🎙️ GlamVoiceVault</h3>
-<p>
-Share audio stories, opinions and valuable insights through voice content designed for listeners worldwide.
-</p>
+<h3>🎙️ Voice Vault</h3>
+<p>Users can upload and share voice content, storytelling, and opinions to earn engagement-based rewards.</p>
 </div>
 
 </div>
-
 </section>
 
-<section class="why">
+<!-- HOW IT WORKS -->
+<section class="section">
+<h2 class="title">How It Works</h2>
 
-<h2 class="section-title">
-How <span class="gold">It Works</span>
-</h2>
+<div class="grid">
 
-<div class="why-grid">
-
-<div class="card">
-<h3>1️⃣ Create Account</h3>
-<p>
-Register your account with your personal information and create your secure login details.
-</p>
-</div>
-
-<div class="card">
-<h3>2️⃣ Activate Membership</h3>
-<p>
-Access your dashboard and follow the activation instructions displayed on your account.
-</p>
-</div>
-
-<div class="card">
-<h3>3️⃣ Submit Proof</h3>
-<p>
-Send your payment proof through WhatsApp for confirmation and review.
-</p>
-</div>
-
-<div class="card">
-<h3>4️⃣ Access Dashboard</h3>
-<p>
-Once your account is confirmed, access platform features, announcements and member resources.
-</p>
-</div>
+<div class="card"><h3>1. Register</h3><p>Create your account on NEXTEL platform.</p></div>
+<div class="card"><h3>2. Login</h3><p>Access your personal dashboard securely.</p></div>
+<div class="card"><h3>3. Activate Account</h3><p>Complete activation to unlock earning features (not free).</p></div>
+<div class="card"><h3>4. Make calls</h3><p>Start with simple 10-minute AI Calls.</p></div>
+<div class="card"><h3>5. Choose Earnings Path</h3><p>Select from quizzes, videos, WhatsApp or news rewards.</p></div>
+<div class="card"><h3>6. Complete Tasks</h3><p>Perform daily activities and earn rewards.</p></div>
+<div class="card"><h3>7. Withdraw Earnings</h3><p>Transfer your earnings directly to your bank account.</p></div>
 
 </div>
-
 </section>
 
-<section class="why" style="background:#0b0b0b;">
+<!-- ================= EARNING PLANS ================= -->
+<section class="section">
+<h2 class="title">Nextel Earning Plans</h2>
 
-<h2 class="section-title">
-Why Members Choose <span class="gold">Glamour</span>
-</h2>
+<div class="grid">
 
-<div class="why-grid">
-
+<!-- ================= DIAMOND PLAN ================= -->
 <div class="card">
-<h3>⚡ Fast Setup</h3>
+<h3>  DIAMOND PLAN </h3>
+
 <p>
-Create your account in minutes and begin your onboarding process quickly.
+<b>Enrollment Fee:</b> ₦10,500 
+</p>
+
+<br>
+
+<p><b>💰 EARNING STRUCTURE</b></p>
+
+<br>
+
+<p>
+💰 <b>Instant Cashback</b><br>
+Earn ₦8,000 ($4.50) instantly after successful activation.
+</p>
+
+<br>
+
+<p>
+🤝 <b>Direct CALL Bonus</b><br>
+Earn ₦7,200 ($3.60) for every direct referral.
+</p>
+
+<br>
+
+<p>
+🌟 <b>Indirect Referral Bonuses</b><br>
+• 1st Level Indirect Bonus: ₦300 ($0.15)<br>
+• 2nd Level Indirect Bonus: ₦100 ($0.05)
+</p>
+
+<br>
+
+<p>
+📞 <b>CALL Rewards</b><br>
+• call Upload Reward: ₦1,500 ($0.75)<br>
+• call Lucky Book Reward: ₦5,000 ($2.50)
+</p>
+
+<br>
+
+<p>
+💬 <b>SMS Reward</b><br>
+Earn up to ₦4,000 ($2.00) by sending messages for higher institutions.
+</p>
+
+<br>
+
+<p>
+▶️ <b>YouTube Earnings</b><br>
+Earn up to ₦20,000 ($10.00) through YouTube engagement tasks.
+</p>
+
+<br>
+
+<p>
+👻 <b>Snapchat Earnings</b><br>
+Earn ₦1,000 ($0.50) from Snapchat activities.
+</p>
+
+<br>
+
+<p>
+🎁 <b>Active User Spillover</b><br>
+Receive ₦1,000 ($0.50) spillover rewards from active network growth.
+</p>
+
+<br>
+
+<p>
+<b>💳 WITHDRAWAL</b><br><br>
+✅ Daily withdrawal available. Minimum ₦20,000 ($7)<br>
+✅ Fast processing to your registered payment account.
 </p>
 </div>
 
+<!-- ================= ROYAL PLAN ================= -->
 <div class="card">
-<h3>🔒 Secure Platform</h3>
+<h3>🔥NEXTEL ROYAL PLAN 🔥</h3>
+
 <p>
-Your account is protected through secure authentication and account management tools.
+<b>Enrollment Fee:</b> ₦17,500 ($8.75)
 </p>
-</div>
 
-<div class="card">
-<h3>🌍 Global Community</h3>
+<br>
+
+<p><b>━━━━━━━━━━━━━━━</b></p>
+
+<p><b>💰 EARNING STRUCTURE</b></p>
+
+<p><b>━━━━━━━━━━━━━━━</b></p>
+
+<br>
+
 <p>
-Connect with people from different countries and backgrounds through one platform.
+🎁 <b>Instant Cashback</b><br>
+Receive ₦16,000 ($8.00) instantly upon successful activation.
 </p>
-</div>
 
-<div class="card">
-<h3>💬 Dedicated Support</h3>
+<br>
+
 <p>
-Need help? Our support team is available through WhatsApp to assist members.
+🤝 <b>Direct Connection Bonus</b><br>
+Earn ₦12,500 ($6.25) for every direct referral.
 </p>
-</div>
 
-<div class="card">
-<h3>📱 Mobile Friendly</h3>
+<br>
+
 <p>
-Enjoy a smooth experience on Android, iPhone, tablets and desktop devices.
+🌟 <b>Spillover Bonuses</b><br>
+• 1st Spillover Bonus – ₦1000 ($0.50)<br>
+• 2nd Spillover Bonus – ₦500 ($0.25)
 </p>
-</div>
 
-<div class="card">
-<h3>🚀 Premium Dashboard</h3>
+<br>
+
 <p>
-Manage your account, activation status and profile from a modern dashboard.
+📞 <b> call Rewards</b><br>
+• CALL Upload Reward – ₦2,000 ($1.50)<br>
+• CONSISTENT CALL Reward – ₦10,000 ($5.00)
 </p>
-</div>
+
+<br>
+
+<p>
+💬 <b>SMS Reward</b><br>
+Earn up to ₦8,000 ($4.00) from Sending activities.
+</p>
+
+<br>
+
+<p>
+▶️ <b>YouTube Earnings</b><br>
+Earn up to ₦40,000 ($20.00) through YouTube engagement tasks.
+</p>
+
+<br>
+
+<p>
+👻 <b>Snapchat Earnings</b><br>
+Earn ₦6,000 ($3.00) from Snapchat-related activities.
+</p>
+
+<br>
+
+<p>
+🎉 <b>Active User Spillover</b><br>
+Receive ₦8,000 ($4.00) from active user spillover rewards.
+</p>
+
+<br>
+
+<p><b>━━━━━━━━━━━━━━━</b></p>
+
+<p><b>💳 WITHDRAWAL</b></p>
+
+<p><b>━━━━━━━━━━━━━━━</b></p>
+
+<br>
+
+<p>
+✅ Daily Withdrawal Available, minimum ₦10,000 ($5)<br>
+✅ Fast Processing<br>
+✅ Secure Payment System
+</p>
 
 </div>
 
+</div>
 </section>
-<section class="why">
 
-<h2 class="section-title">
-Member <span class="gold">Testimonials</span>
-</h2>
+<!-- TESTIMONIALS -->
+<section class="section">
+<h2 class="title">What People Say</h2>
 
-<div class="why-grid">
+<div class="grid">
 
-<div class="card">
-<h3>👤 Chinedu A.</h3>
-<p>
-Creating my account was very easy. The support team guided me through the process and everything was straightforward.
-</p>
-</div>
-
-<div class="card">
-<h3>👤 Amina B.</h3>
-<p>
-The platform is mobile friendly and simple to navigate. I completed my registration directly from my phone.
-</p>
-</div>
-
-<div class="card">
-<h3>👤 David O.</h3>
-<p>
-I like how organized everything is. The dashboard and activation process were clearly explained.
-</p>
-</div>
-
-<div class="card">
-<h3>👤 Grace N.</h3>
-<p>
-The support response was fast and professional. I always received help whenever I needed assistance.
-</p>
-</div>
-
-<div class="card">
-<h3>👤 Emmanuel T.</h3>
-<p>
-One of the best registration experiences I've had online. Everything worked smoothly.
-</p>
-</div>
-
-<div class="card">
-<h3>👤 Esther A.</h3>
-<p>
-The platform design looks premium and works perfectly on both mobile and desktop.
-</p>
-</div>
+<div class="card"><h3>Chinedu A.</h3><p>NEXTEL gave me multiple income streams I never expected.</p></div>
+<div class="card"><h3>Amina B.</h3><p>The call system alone helps me earn daily rewards.</p></div>
+<div class="card"><h3>David O.</h3><p>AI tools are simple and powerful to use.</p></div>
+<div class="card"><h3>Grace N.</h3><p>News system keeps me updated while I earn.</p></div>
+<div class="card"><h3>Emmanuel T.</h3><p>Support is fast and very helpful.</p></div>
+<div class="card"><h3>Esther A.</h3><p>The platform feels modern and trustworthy.</p></div>
 
 </div>
-
 </section>
 
-<section class="why" style="background:#0b0b0b;">
+<!-- FAQ (EXPANDED VERSION - COPY ONLY THIS SECTION) -->
+<section class="section">
+<h2 class="title">Frequently Asked Questions</h2>
 
-<h2 class="section-title">
-Frequently Asked <span class="gold">Questions</span>
-</h2>
-
-<div class="why-grid">
+<div class="grid">
 
 <div class="card">
-<h3>❓ What is Glamour Registration?</h3>
+<h3>What is NEXTEL?</h3>
 <p>
-Glamour Registration is a platform where users can create accounts, activate membership and access platform features through a secure dashboard.
+Nextel Connect is Nigeria's premium digital earning ecosystem, built around network participation, structured rewards, and real payouts..
 </p>
 </div>
 
 <div class="card">
-<h3>❓ How do I create an account?</h3>
+<h3>Is NEXTEL a learning or earning platform?</h3>
 <p>
-Click the Create Account button and fill in your registration details including name, email, phone number, country and password.
+NEXTEL is both. It is designed as a hybrid ecosystem where users first learn AI skills through simple lessons and then apply those skills to earn through different earning modules integrated into the platform.
 </p>
 </div>
 
 <div class="card">
-<h3>❓ How do I activate my account?</h3>
+<h3>Is registration free?</h3>
 <p>
-After registration, login to your dashboard and follow the activation instructions provided.
+Yes, creating an account on Nextel is free. However, to unlock full earning features, users are required to activate their account through one of the available plans. Activation gives access to all earning systems and rewards.
 </p>
 </div>
 
 <div class="card">
-<h3>❓ Where do I send payment proof?</h3>
+<h3>How do I activate my account?</h3>
 <p>
-Payment proof should be submitted through the WhatsApp support button on the activation page.
+After registering and logging in, you will be guided to the activation page where you can choose a plan (Platinum or Gold). Once payment is completed, your account is upgraded and all earning features become active.
 </p>
 </div>
 
 <div class="card">
-<h3>❓ Is my account secure?</h3>
+<h3>How do I earn on NEXTEL?</h3>
 <p>
-Yes. User accounts are protected through secure authentication and account management systems.
+You earn by completing different activities such as answering CALLS,SEND SMS , watching and rating AI videos, sharing content on WhatsApp, reading news updates, creating AI videos, referring new users, and participating in platform engagement systems.
 </p>
 </div>
 
 <div class="card">
-<h3>❓ Can I use my phone?</h3>
+<h3>How do withdrawals work?</h3>
 <p>
-Yes. The platform is fully optimized for Android, iPhone, tablets and desktop devices.
+Withdrawals are processed directly to your registered bank account after reaching the minimum withdrawal threshold. Processing is fast and depends on your activity level and account status.
+</p>
+</div>
+
+<div class="card">
+<h3>Is NEXTEL available worldwide?</h3>
+<p>
+Yes. NEXTEL is a global platform available to users from multiple countries. The system is designed to support international users with digital earning opportunities regardless of location.
+</p>
+</div>
+
+<div class="card">
+<h3>Do I need experience to use VELORA?</h3>
+<p>
+No experience is required. The platform is beginner-friendly, and all AI learning modules are designed in simple steps so anyone can start earning even without technical knowledge.
+</p>
+</div>
+
+<div class="card">
+<h3>Is NEXTEL safe and secure?</h3>
+<p>
+Yes. NEXTEL uses a secure system to protect user data, earnings, and transactions. All user activities are tracked within a controlled environment to ensure transparency and safety.
+</p>
+</div>
+
+<div class="card">
+<h3>Can I use my phone?</h3>
+<p>
+Yes. NEXTEL works perfectly on Android phones, iPhones, tablets, and computers. The platform is fully mobile-optimized for smooth access anywhere.
+</p>
+</div>
+
+<div class="card">
+<h3>What happens after activation?</h3>
+<p>
+Once activated, you gain full access to all earning modules including AI tools, quizzes, WhatsApp rewards, YouTube systems, news earnings, and referral bonuses. You can immediately start completing tasks and earning.
 </p>
 </div>
 
 </div>
-
 </section>
+<!-- CTA -->
+<section class="section">
+<h2 class="title">Ready to Join NEXTEL?</h2>
 
-<section style="padding:100px 20px;text-align:center;">
-
-<h2 style="font-size:45px;margin-bottom:20px;">
-Ready to Join <span class="gold">GLAMOUR?</span>
-</h2>
-
-<p style="max-width:800px;margin:auto;color:#cfcfcf;line-height:1.8;margin-bottom:40px;">
-Create your account today and gain access to the Glamour platform, premium member dashboard and support resources.
-</p>
+<div class="grid">
+<div class="card">
+<h3>Start Your Journey Today</h3>
+<p>Create your account and start earning through AI-powered opportunities.</p>
 
 <div class="btns">
-
-<a href="register.html" class="btn btn-primary">
-CREATE ACCOUNT
-</a>
-
-<a href="https://wa.me/234 9111591684" class="btn btn-secondary">
-WHATSAPP SUPPORT
-</a>
-
+<a href="register.html" class="btn btn-primary">CREATE ACCOUNT</a>
+<a href="https://wa.me/2348069702505" class="btn btn-secondary">WHATSAPP SUPPORT</a>
 </div>
-
+</div>
+</div>
 </section>
 
-<footer style="background:#0a0a0a;padding:40px 20px;text-align:center;border-top:1px solid rgba(255,215,0,.15);">
+<footer>  
+<h3>NEXTEL</h3>  
+<p>Where. Every call. Creates value</p>  <p>WhatsApp Support: +2348069702505</p>  <p>© 2026 VELORA AI ACADEMY. All Rights Reserved.</p>  
+</footer>
+<!-- ===== NEXTEL ACTIVITY POPUP ===== -->
+<div class="live-popup" id="livePopup">
+  <div class="live-title">NEXTEL ACTIVITY FEED</div>
+  <div id="popupMessage"></div>
+  <div class="live-time" id="popupTime"></div>
+</div>
 
-<h3 style="color:#FFD700;margin-bottom:15px;">
-💎 GLAMOUR REGISTRATION
-</h3>
+<!-- ===== SOUND ===== -->
 
-<p style="color:#aaa;margin-bottom:15px;">
-Premium Member Platform
-</p>
+<script>
+const messages = [
+"Ade from Lagos, Nigeria just joined NEXTEL",
+"Chinedu from Abuja, Nigeria activated account",
+"Maria from Nairobi, Kenya registered",
+"John from London, UK joined NEXTEL",
+"Fatima from Kano, Nigeria activated account",
+"David from Accra, Ghana signed up",
+"Aisha from Lagos, Nigeria joined NEXTEL",
+"Emmanuel from Port Harcourt, Nigeria activated account",
+"Grace from Toronto, Canada registered",
+"Samuel from Texas, USA joined",
+"Blessing from Ogun, Nigeria activated",
+"Ahmed from Cairo, Egypt joined NEXTEL",
+"Peter from Berlin, Germany registered",
+"Sarah from Cape Town, South Africa activated",
+"Michael from Dubai, UAE joined",
+"Esther from Enugu, Nigeria signed up",
+"Ibrahim from Sokoto, Nigeria activated account",
+"Joy from Ibadan, Nigeria joined NEXTEL",
+"Daniel from Paris, France registered",
+"Jennifer from Nairobi, Kenya activated account",
+"Victor from Lagos, Nigeria joined",
+"Linda from Manchester, UK signed up",
+"Isaac from Ghana activated account",
+"Rose from Abuja, Nigeria joined",
+"Paul from USA registered",
+"Kelvin from Lagos, Nigeria joined",
+"Zainab from Morocco registered",
+"Henry from Canada activated",
+"Nathan from Kenya joined",
+"Uche from Nigeria activated account",
+"Mercy from Lagos, Nigeria registered",
+"Ali from Saudi Arabia joined",
+"Faith from Abuja, Nigeria activated account",
+"Prince from Ghana registered",
+"Victoria from UK joined",
+"Samuel from USA activated",
+"Angela from Nigeria registered",
+"Bright from Lagos, Nigeria joined",
+"Rebecca from Kenya activated account",
+"Godwin from Port Harcourt, Nigeria registered",
+"Janet from Canada joined",
+"Stephen from Egypt activated account",
+"Mary from UK registered",
+"Joshua from Ghana joined",
+"Chioma from Nigeria activated account",
+"Daniel from USA registered",
+"Favour from Lagos, Nigeria joined",
+"Michael from Kenya activated account",
+"Esther from UK registered"
+];
 
-<p style="color:#aaa;">
-WhatsApp Support: +2349111591684
-</p>
+function showPopup(){
+const popup=document.getElementById("livePopup");
+const msg=document.getElementById("popupMessage");
+const time=document.getElementById("popupTime");
 
-<p style="color:#666;margin-top:20px;">
-© 2026 Glamour Registration. All Rights Reserved.
-</p>
+const randomMsg=messages[Math.floor(Math.random()*messages.length)];
+const randomTime=Math.floor(Math.random()*30)+1;
 
-  </footer>
+msg.innerHTML=randomMsg;
+time.innerHTML=randomTime+" minutes ago";
+
+popup.style.display="block";
+
+/* 🔊 STRONG SOUND FIX */
+if(sound){
+sound.volume = 1.0;
+sound.currentTime = 0;
+}
+
+setTimeout(()=>{
+popup.style.display="none";
+},5000);
+}
+
+/* AUTO START SYSTEM */
+window.addEventListener("load",()=>{
+setTimeout(showPopup,3000);
+setInterval(showPopup,7000);
+});
+</script>
+    
+</body>
+</html>
